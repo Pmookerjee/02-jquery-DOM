@@ -35,11 +35,12 @@ Article.prototype.toHtml = function() {
     3. article title,
     4. article body, and
     5. publication date. */
-      $newArticle.name = this.name;
-      $newArticle.authorUrl.text = this.authorUrl;
-      $newArticle.title = this.title;
-      $newArticle.body = this.body;
-      $newArticle.publishedOn = this.publishedOn;
+
+      // $newArticle.name = this.name;
+      // $newArticle.authorUrl.text = this.authorUrl;
+      // $newArticle.title = this.title;
+      // $newArticle.body = this.body;
+      // $newArticle.publishedOn = this.publishedOn;
     // lots of $newArticle.find...  (look at jQuery $.find docs)
 
     console.log($newArticle);
