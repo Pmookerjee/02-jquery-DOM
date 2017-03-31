@@ -6,6 +6,13 @@ function Article (opts) {
   // TODO: Use the JS object passed in to complete this constructor function:
   // Save ALL the properties of `opts` into `this`
   // lots of this.someProperty = opts.property
+  this.title = opts.title;
+  this.category = opts.category;
+  this.author = opts.author;
+  this.authorUrl = opts.authorUrl;
+  this.publishedOn = opts.publishedOn;
+  this.body = opts.body;
+  articles.push(this);
 }
 
 Article.prototype.toHtml = function() {
@@ -15,6 +22,7 @@ Article.prototype.toHtml = function() {
   for that before this current article gets rendered to our
   DOM. */
   // one line of code to remove the class that hides the template so that the articles will actually show
+  $newArticle.each(function() { $(this).removeClass('template'); });
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
@@ -27,7 +35,11 @@ Article.prototype.toHtml = function() {
     3. article title,
     4. article body, and
     5. publication date. */
-
+      $newArticle.name = this.name;
+      $newArticle.authorUrl.text = this.authorUrl;
+      $newArticle.title = this.title;
+      $newArticle.body = this.body;
+      $newArticle.publishedOn = this.publishedOn;
     // lots of $newArticle.find...  (look at jQuery $.find docs)
 
     console.log($newArticle);
