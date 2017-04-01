@@ -42,12 +42,6 @@ Article.prototype.toHtml = function() {
   $newArticle.find('time').html(this.publishedOn);
   $newArticle.find('.article-body').html(this.body);
 
-
-
-  // $newArticle.authorUrl.text = this.authorUrl;
-  // $newArticle.title = this.title;
-  // $newArticle.body = this.body;
-  // $newArticle.publishedOn = this.publishedOn;
   // lots of $newArticle.find...  (look at jQuery $.find docs)
 
   console.log($newArticle);
